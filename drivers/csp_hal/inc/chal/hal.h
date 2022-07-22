@@ -1,11 +1,17 @@
 /**
  * @file hal.h
- * @author your name (you@domain.com)
+ * @author xqyjlj (xqyjlj@126.com)
  * @brief
  * @version 0.1
  * @date 2022-07-16
  *
- * @copyright Copyright (c) 2022
+ * @copyright Copyright (c) 2022-2022, zhouquan
+ *
+ * @SPDX-License-Identifier: Apache-2.0
+ *
+ * Change Logs:
+ * Date           Author       Notes
+ * 2022-07-16     xqyjlj      the first version
  *
  */
 

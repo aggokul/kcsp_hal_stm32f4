@@ -1,11 +1,17 @@
 /**
  * @file csp_hal.c
- * @author your name (you@domain.com)
+ * @author xqyjlj (xqyjlj@126.com)
  * @brief
  * @version 0.1
  * @date 2022-07-17
  *
- * @copyright Copyright (c) 2022
+ * @copyright Copyright (c) 2022-2022, zhouquan
+ *
+ * @SPDX-License-Identifier: Apache-2.0
+ *
+ * Change Logs:
+ * Date           Author       Notes
+ * 2022-07-17     xqyjlj      the first version
  *
  */
 
@@ -35,7 +41,7 @@ rt_err_t chal_deinit()
 
 RT_WEAK void CSP_clock_init()
 {
-    chal_clock_t clock = {0};
+    chal_clock_t clock            = {0};
 
     clock.vos                     = PWR_REGULATOR_VOLTAGE_SCALE1;
     clock.osc.OscillatorType      = RCC_OSCILLATORTYPE_HSI;
@@ -48,13 +54,13 @@ RT_WEAK void CSP_clock_init()
     clock.osc.PLL.PLLP            = RCC_PLLP_DIV2;
     clock.osc.PLL.PLLQ            = 4;
 
-    clock.clk.ClockType      = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
-    clock.clk.SYSCLKSource   = RCC_SYSCLKSOURCE_PLLCLK;
-    clock.clk.AHBCLKDivider  = RCC_SYSCLK_DIV1;
-    clock.clk.APB1CLKDivider = RCC_HCLK_DIV2;
-    clock.clk.APB2CLKDivider = RCC_HCLK_DIV1;
+    clock.clk.ClockType           = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2;
+    clock.clk.SYSCLKSource        = RCC_SYSCLKSOURCE_PLLCLK;
+    clock.clk.AHBCLKDivider       = RCC_SYSCLK_DIV1;
+    clock.clk.APB1CLKDivider      = RCC_HCLK_DIV2;
+    clock.clk.APB2CLKDivider      = RCC_HCLK_DIV1;
 
-    clock.latency = FLASH_LATENCY_5;
+    clock.latency                 = FLASH_LATENCY_5;
 
     chal_clock_init(&clock);
 }

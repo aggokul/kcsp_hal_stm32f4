@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F401xE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\drivers\csp_hal\inc;..\..\drivers\csp_rt\inc;..\..\drivers\stm32_hal\inc;..\..\libraries\STM32F4xx_HAL_Driver\Inc</IncludePath>
+              <IncludePath>..\..\drivers\csp_hal\inc;..\..\drivers\csp_rt\inc;..\..\drivers\stm32_hal\inc;..\..\libraries\STM32F4xx_HAL_Driver\Inc;..\..\csp\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,6 +390,9 @@
               <FilePath>..\..\applications\main.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>csp</GroupName>
         </Group>
         <Group>
           <GroupName>drivers/csp_hal</GroupName>

@@ -255,23 +255,23 @@ void rt_kputs(const char *str)
  */
 void rt_kprintf(const char *fmt, ...)
 {
-    va_list args;
-    rt_size_t length;
-    static char rt_log_buf[RT_CONSOLEBUF_SIZE];
+    // va_list args;
+    // rt_size_t length;
+    // static char rt_log_buf[RT_CONSOLEBUF_SIZE];
 
-    va_start(args, fmt);
-    /* the return value of vsnprintf is the number of bytes that would be
-     * written to buffer had if the size of the buffer been sufficiently
-     * large excluding the terminating null byte. If the output string
-     * would be larger than the rt_log_buf, we have to adjust the output
-     * length. */
-    length = vsnprintf(rt_log_buf, sizeof(rt_log_buf) - 1, fmt, args);
-    if (length > RT_CONSOLEBUF_SIZE - 1)
-        length = RT_CONSOLEBUF_SIZE - 1;
+    // va_start(args, fmt);
+    // /* the return value of vsnprintf is the number of bytes that would be
+    //  * written to buffer had if the size of the buffer been sufficiently
+    //  * large excluding the terminating null byte. If the output string
+    //  * would be larger than the rt_log_buf, we have to adjust the output
+    //  * length. */
+    // length = vsnprintf(rt_log_buf, sizeof(rt_log_buf) - 1, fmt, args);
+    // if (length > RT_CONSOLEBUF_SIZE - 1)
+    //     length = RT_CONSOLEBUF_SIZE - 1;
 
-    rt_hw_console_output(rt_log_buf);
+    // rt_hw_console_output(rt_log_buf);
 
-    va_end(args);
+    // va_end(args);
 }
 #endif
 
